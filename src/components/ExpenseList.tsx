@@ -30,7 +30,7 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
             <td>{expenses.category}</td>
             <td>
               <button
-                className="btn btn outline-danger"
+                className="btn btn-outline-danger"
                 onClick={() => onDelete(expenses.id)}
               >
                 Delete
