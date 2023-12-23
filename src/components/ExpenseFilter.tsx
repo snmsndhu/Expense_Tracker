@@ -1,14 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const ExpenseFilter = () => {
-  return (
-    <select className="form-select">
-        <option value="">All category</option>
-        <option value="Groceries">Groceries</option>
-        <option value="Utilities">Utilities</option>
-        <option value="Entertainment">Entertainment</option>
-    </select>>
-  )
+interface Props {
+  onSelectCategory: (catergory: string) => void;
 }
 
-export default ExpenseFilter
+const ExpenseFilter = ({ onSelectCategory }: Props) => {
+  return (
+    <select
+      className="form-select"
+      onChange={(event) => onSelectCategory(event.target.value)}
+    >
+      <option value="">All category</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Utilities">Utilities</option>
+      <option value="Entertainment">Entertainment</option>
+    </select>
+  );
+};
+
+export default ExpenseFilter;

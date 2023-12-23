@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExpenseList from "./components/ExpenseList";
+import ExpenseFilter from "./components/ExpenseFilter";
 
 const App = () => {
   const [expenses, setExpenses] = useState([
@@ -10,6 +11,9 @@ const App = () => {
   ]);
   return (
     <div>
+      <div className="mb-3">
+        <ExpenseFilter onSelectCategory={(category) => console.log(category)} />
+      </div>
       <ExpenseList
         expenses={expenses}
         onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
