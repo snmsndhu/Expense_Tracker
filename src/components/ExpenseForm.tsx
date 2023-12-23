@@ -1,6 +1,15 @@
 import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { categories } from "../App";
 
+const schema = z.object({
+  description: z.string().min(3).max(50),
+  amount: z.number().min(0.01).max(100_000),
+  category: z.enum(categories),
+});
+
+type ExpenseFormData = z.infer<typeof schema>;
 const ExpenseForm = () => {
   return (
     <form>
