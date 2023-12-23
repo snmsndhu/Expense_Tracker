@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseFilter from "./components/ExpenseFilter";
 
+export const categories = ["Groceries", "Utilites", "Entertainment"];
 const App = () => {
   const [selectedCategory, setSelectedCatergory] = useState("");
   const [expenses, setExpenses] = useState([

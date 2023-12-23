@@ -21,6 +21,11 @@ const ExpenseForm = () => {
         </label>
         <select id="catergory" className="form-select"></select>
         <option value=""></option>
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
       </div>
     </form>
   );
