@@ -1,4 +1,4 @@
-import React from "react";
+import { z } from "zod";
 import { categories } from "../App";
 
 const ExpenseForm = () => {
