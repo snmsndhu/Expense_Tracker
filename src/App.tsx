@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseFilter from "./components/ExpenseFilter";
 import ExpenseForm from "./components/ExpenseForm";
-
-export const categories = ["Groceries", "Utilites", "Entertainment"] as const;
+import categories from "./categories";
 const App = () => {
   const [selectedCategory, setSelectedCatergory] = useState("");
   const [expenses, setExpenses] = useState([
