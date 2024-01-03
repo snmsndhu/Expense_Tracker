@@ -36,7 +36,7 @@ const ExpenseForm = () => {
           Amount
         </label>
         <input
-          {...register("amount")}
+          {...register("amount", { valueAsNumber: true })}
           id="amount"
           type="number"
           className="form-control"
