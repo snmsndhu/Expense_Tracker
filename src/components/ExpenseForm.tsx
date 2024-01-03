@@ -16,7 +16,7 @@ const ExpenseForm = () => {
     formState: { errors },
   } = useForm<ExpenseFormData>({ resolver: zodResolver(schema) });
   return (
-    <form>
+    <form onSubmit={handleSubmit((data) => console.log(data))}>
       <div className="mb-3">
         <label htmlFor="desciprtion" className="form-label">
           Desciprtion
